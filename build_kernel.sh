@@ -7,5 +7,6 @@ patch -p1 -N < kernelsu.patch
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
 
 # Building
+export ARCH=arm64
 make O=out beryllium_defconfig
 make O=out CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabi-
